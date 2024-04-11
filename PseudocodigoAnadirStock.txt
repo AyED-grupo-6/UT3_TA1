@@ -1,0 +1,43 @@
+AgregarStock(nombreProducto, cantidad)
+
+Comienzo
+    actual <- cabeza
+
+    Mientras actual.nombre <> nombreProducto
+        actual <- actual.siguiente
+    Fin Mientras
+    
+    actual.stock <- actual.stock + cantidad
+Fin
+
+
+AgregarStock(codigoProducto, cantidad)
+
+Comienzo
+    actual<- cabeza
+
+    Mientras actual.codigo <> nombreProducto
+        actual <- actual.siguiente
+    Fin Mientras
+    
+    actual.stock <- actual.stock + cantidad
+Fin
+
+AgregarStock(nombreProducto, codigoProducto, cantidad, precio)
+
+Comienzo
+    actual <- cabeza
+    bandera <- falso
+
+    Mientras actual <> nulo
+        Si actual.nombre = nombreProducto       
+            bandera <- verdadero
+            break
+        Fin Si
+    Fin Mientras
+
+    Si bandera = verdadero 
+        actual.stock <- cantidad
+        actual.precio <- precio
+    Sino
+        actual.siguiente = new Producto(nombreProducto, codigoProducto, cantidad, precio)

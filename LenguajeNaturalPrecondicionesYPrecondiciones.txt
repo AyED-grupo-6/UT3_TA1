@@ -1,0 +1,38 @@
+La función recibe un nombre de producto o código de identificación, (opcionalmente) un precio unitario y la cantidad.
+Debe buscar en la lista de productos el que coincida por nombre o código y, en caso de encontrarlo, sumarle al stock y, 
+si se dio un precio, actualizarlo.
+En caso de que no lo encuentre debe añadirlo como nuevo, asignarle un código de identificación y el precio.
+
+Precondiciones y condiciones:
+
+AgregarStock(nombreProducto, cantidad)
+
+Precondiciones:
+- Que el nombre del producto sea no nulo
+- Que el producto esté en la lista
+- Que la cantidad sea positiva
+
+Postcondiciones:
+- El producto pasado como parámetro ahora tiene la cantidad pasada como parámetro más la anterior como stock
+
+AgregarStock(códigoProducto, cantidad)
+
+Precondiciones:
+- Que el código del producto sea no nulo
+- Que el producto esté en la lista
+- Que la cantidad sea positiva
+
+Postcondiciones:
+- El producto pasado como parámetro ahora tiene la cantidad pasada como parámetro más la anterior como stock
+
+AgregarStock(nombreProducto, códigoProducto, cantidad, precio)
+
+Precondiciones:
+- Que el nombre y el código del producto sean no nulos
+- Que la cantidad sea positiva
+- Que si el nombre del producto no existe en la lista, el código del producto tampoco y viceversa
+
+Postcondiciones:
+
+- El producto pasado como parámetro ahora tiene la cantidad pasada como parámetro más la anterior como stock si existía en la lista, actualizándole el precio
+Sino es creado con la cantidad, código y precio pasados como parámetros y asignándole un código de producto.
